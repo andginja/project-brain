@@ -16,18 +16,69 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/src/fonts/Montserrat-Regular.woff2") format("woff2");
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@font-face {
+  font-family: "Montserrat";
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/src/fonts/Montserrat-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/src/fonts/Montserrat-Medium.woff2") format("woff2");
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #c9c8c8;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #b3b2b2;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUpDown {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
   }
 }
